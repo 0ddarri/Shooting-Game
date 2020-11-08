@@ -13,17 +13,8 @@
 #include "bullet.h"
 #include "monster.h"
 #include "effect.h"
+#include "Manager.h"
 
-extern stBullet g_Bullet[Max]; // 접근만됨
-
-extern stHero g_Hero; // 모든 곳에서 사용가능하게 해준나더, hero.h 위에 있으면 인식 안됨
-
-extern stMonster g_Monster[Max];
-
-extern stEffect g_Effect[Max];
-
-extern char c_Effect[3][3][3];
-
-extern int isCol;
+extern GameMng g_mng;
 
 #endif

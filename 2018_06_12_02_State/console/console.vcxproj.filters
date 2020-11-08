@@ -16,6 +16,9 @@
     <Filter Include="Effect">
       <UniqueIdentifier>{1fee6312-7ada-4389-b576-c2879e9e2768}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{6645531c-888a-459d-bd8d-b9e3d263a537}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ConsoleEx3\ConWrap.cpp">
@@ -36,6 +39,9 @@
     </ClCompile>
     <ClCompile Include="effect.cpp">
       <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +69,9 @@
     </ClInclude>
     <ClInclude Include="effect.h">
       <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

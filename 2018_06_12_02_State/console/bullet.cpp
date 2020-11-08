@@ -1,23 +1,23 @@
 #include "Include.h"
 
-//stBullet g_Bullet[Max];
+//stBullet g_mng.g_Bullet[Max];
 
 void BulletInit()
 {
 	for (int i = 0; i < Max; i++)
 	{
-		g_Bullet[i].x = -999;
-		g_Bullet[i].y = -99;
-		g_Bullet[i].live = false;
-		g_Bullet[i].fColor = YELLOW; // 색깔 바꾸기
-		g_Bullet[i].speed = 2;
-		g_Bullet[i].body = '|';
-		g_Bullet[i].bColor = BLACK;
+		g_mng.g_Bullet[i].x = -999;
+		g_mng.g_Bullet[i].y = -99;
+		g_mng.g_Bullet[i].live = false;
+		g_mng.g_Bullet[i].fColor = YELLOW; // 색깔 바꾸기
+		g_mng.g_Bullet[i].speed = 2;
+		g_mng.g_Bullet[i].body = '|';
+		g_mng.g_Bullet[i].bColor = BLACK;
 	}
 }
 
-DWORD StartTime;
-DWORD EndTime = GetTickCount();
+	DWORD StartTime;
+	DWORD EndTime = GetTickCount();
 
 
 
@@ -30,11 +30,11 @@ void BulletUpdate()
 		for (int i = 0; i < Max; i++)
 		{
 
-			if (g_Bullet[i].live == false && StartTime - EndTime >= 100)
+			if (g_mng.g_Bullet[i].live == false && StartTime - EndTime >= 100)
 			{
-				g_Bullet[i].x = g_Hero.x; // 플레이어 위치로 설정
-				g_Bullet[i].y = g_Hero.y; // 플레이어 위치로 설정
-				g_Bullet[i].live = true;
+				g_mng.g_Bullet[i].x = g_mng.g_Hero.x; // 플레이어 위치로 설정
+				g_mng.g_Bullet[i].y = g_mng.g_Hero.y; // 플레이어 위치로 설정
+				g_mng.g_Bullet[i].live = true;
 				EndTime = GetTickCount();
 				break;
 			}
@@ -42,12 +42,13 @@ void BulletUpdate()
 	}
 	for (int i = 0; i < Max; i++)
 	{
-		if (g_Bullet[i].y <= 0)
+		if (g_mng.g_Bullet[i].y <= 4)
 		{
-			g_Bullet[i].live = false;
+			g_mng.g_Bullet[i].live = false;
+			g_mng.g_Bullet[i].x = -99999;
 		}
 
-		g_Bullet[i].y -= g_Bullet[i].speed;
+		g_mng.g_Bullet[i].y -= g_mng.g_Bullet[i].speed;
 	}
 	BulletCollision();
 }
@@ -59,16 +60,18 @@ void BulletCollision()
 	{
 		for (int j = 0; j < Max; j++)
 		{
-			if (g_Bullet[j].x == g_Monster[i].x && g_Bullet[j].y <= g_Monster[i].y)
+			if (g_mng.g_Bullet[j].x == g_mng.g_Monster[i].x && g_mng.g_Bullet[j].y <= g_mng.g_Monster[i].y)
 			{
-				EffectInit(g_Monster[i].x, g_Monster[i].y);
+				EffectInit(g_mng.g_Monster[i].x, g_mng.g_Monster[i].y);
 
-				g_Bullet[j].live = false;
-				g_Bullet[j].x = -9999;
-				g_Bullet[j].y = -9999;
-				g_Monster[i].live = false;
-				g_Monster[i].x = -9999;
-				g_Monster[i].y = -9999;
+				g_mng.g_Bullet[j].live = false;
+				g_mng.g_Bullet[j].x = -9999;
+				g_mng.g_Bullet[j].y = -9999;
+				g_mng.g_Monster[i].live = false;
+				g_mng.g_Monster[i].x = -9999;
+				g_mng.g_Monster[i].y = -9999;
+
+				g_mng.nCount += 1;
 			}
 		}
 	}
@@ -78,9 +81,9 @@ void BulletDraw()
 {
 	for (int i = 0; i < Max; i++)
 	{
-		if (g_Bullet[i].live == true)
+		if (g_mng.g_Bullet[i].live == true)
 		{
-			DrawCharEx3(g_Bullet[i].x, g_Bullet[i].y, g_Bullet[i].body, g_Bullet[i].fColor, g_Bullet[i].bColor);
+			DrawCharEx3(g_mng.g_Bullet[i].x, g_mng.g_Bullet[i].y, g_mng.g_Bullet[i].body, g_mng.g_Bullet[i].fColor, g_mng.g_Bullet[i].bColor);
 		}
 	}
 }

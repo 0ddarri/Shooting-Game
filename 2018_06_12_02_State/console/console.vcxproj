@@ -91,6 +91,7 @@
     <ClCompile Include="effect.cpp" />
     <ClCompile Include="hero.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="moster.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +103,7 @@
     <ClInclude Include="effect.h" />
     <ClInclude Include="hero.h" />
     <ClInclude Include="Include.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="monster.h" />
   </ItemGroup>
   <ItemGroup>
