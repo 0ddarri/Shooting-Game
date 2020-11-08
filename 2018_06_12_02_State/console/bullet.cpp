@@ -4,9 +4,10 @@
 
 void BulletInit()
 {
-	//
 	for (int i = 0; i < Max; i++)
 	{
+		g_Bullet[i].x = -999;
+		g_Bullet[i].y = -99;
 		g_Bullet[i].live = false;
 		g_Bullet[i].fColor = YELLOW; // 색깔 바꾸기
 		g_Bullet[i].speed = 2;
@@ -16,11 +17,9 @@ void BulletInit()
 }
 
 DWORD StartTime;
-DWORD EndTime = GetTickCount();;
+DWORD EndTime = GetTickCount();
 
-int timee = 0;;
 
-int isFire = 0;
 
 void BulletUpdate()
 {
@@ -31,7 +30,7 @@ void BulletUpdate()
 		for (int i = 0; i < Max; i++)
 		{
 
-			if (g_Bullet[i].live == false && StartTime - EndTime >= 1000)
+			if (g_Bullet[i].live == false && StartTime - EndTime >= 100)
 			{
 				g_Bullet[i].x = g_Hero.x; // 플레이어 위치로 설정
 				g_Bullet[i].y = g_Hero.y; // 플레이어 위치로 설정
@@ -49,6 +48,29 @@ void BulletUpdate()
 		}
 
 		g_Bullet[i].y -= g_Bullet[i].speed;
+	}
+	BulletCollision();
+}
+
+
+void BulletCollision()
+{
+	for (int i = 0; i < Max; i++)
+	{
+		for (int j = 0; j < Max; j++)
+		{
+			if (g_Bullet[j].x == g_Monster[i].x && g_Bullet[j].y <= g_Monster[i].y)
+			{
+				EffectInit(g_Monster[i].x, g_Monster[i].y);
+
+				g_Bullet[j].live = false;
+				g_Bullet[j].x = -9999;
+				g_Bullet[j].y = -9999;
+				g_Monster[i].live = false;
+				g_Monster[i].x = -9999;
+				g_Monster[i].y = -9999;
+			}
+		}
 	}
 }
 

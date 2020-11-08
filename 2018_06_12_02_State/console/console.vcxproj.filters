@@ -10,6 +10,12 @@
     <Filter Include="Bullet">
       <UniqueIdentifier>{b47b9667-0af9-43f3-a350-2792d5fe88b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Monster">
+      <UniqueIdentifier>{88bb0d96-af95-4020-8384-acdbbfeba889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{1fee6312-7ada-4389-b576-c2879e9e2768}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ConsoleEx3\ConWrap.cpp">
@@ -24,6 +30,12 @@
     </ClCompile>
     <ClCompile Include="bullet.cpp">
       <Filter>Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="moster.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="effect.cpp">
+      <Filter>Effect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +57,12 @@
     </ClInclude>
     <ClInclude Include="bullet.h">
       <Filter>Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="monster.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="effect.h">
+      <Filter>Effect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

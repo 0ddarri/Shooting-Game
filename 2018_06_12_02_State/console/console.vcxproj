@@ -88,8 +88,10 @@
     <ClCompile Include="..\ConsoleEx3\ConWrap.cpp" />
     <ClCompile Include="..\ConsoleEx3\SysTimer.cpp" />
     <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="effect.cpp" />
     <ClCompile Include="hero.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="moster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ConsoleEx3\ConWrap.h" />
@@ -97,8 +99,10 @@
     <ClInclude Include="..\ConsoleEx3\ConWrapDefines.h" />
     <ClInclude Include="..\ConsoleEx3\SysTimer.h" />
     <ClInclude Include="bullet.h" />
+    <ClInclude Include="effect.h" />
     <ClInclude Include="hero.h" />
     <ClInclude Include="Include.h" />
+    <ClInclude Include="monster.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\ConsoleEx3\개발일지.txt" />

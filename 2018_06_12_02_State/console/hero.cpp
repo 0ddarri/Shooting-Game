@@ -18,6 +18,7 @@ void Hero_Update()
 
 	//ºØ½¦
 	Hero_Clipping();
+	Hero_Draw();
 }
 
 void Hero_Move()

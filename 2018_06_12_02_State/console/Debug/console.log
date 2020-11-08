@@ -1,6 +1,6 @@
-﻿  GameState.cpp
-d:\슈팅게임\2018_06_14\슈팅게임\2018_06_12_02_state\console\gamestate.cpp(461): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 'sprintf' 선언을 참조하십시오.
-d:\슈팅게임\2018_06_14\슈팅게임\2018_06_12_02_state\console\gamestate.cpp(475): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 'sprintf' 선언을 참조하십시오.
-  console.vcxproj -> D:\슈팅게임\2018_06_14\슈팅게임\2018_06_12_02_State\Debug\console.exe
+﻿cl : 명령줄 warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  bullet.cpp
+C:\Users\skill2\Desktop\Shooting-Game-main\2018_06_12_02_State\console\bullet.cpp(81,31): warning C4805: '==': 연산에 'boolean' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
+C:\Users\skill2\Desktop\Shooting-Game-main\2018_06_12_02_State\console\bullet.cpp(83,95): warning C4244: '인수': 'DWORD'에서 'WORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\skill2\Desktop\Shooting-Game-main\2018_06_12_02_State\console\bullet.cpp(83,75): warning C4244: '인수': 'DWORD'에서 'WORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  console.vcxproj -> C:\Users\skill2\Desktop\Shooting-Game-main\2018_06_12_02_State\Debug\console.exe

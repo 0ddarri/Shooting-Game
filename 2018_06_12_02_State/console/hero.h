@@ -15,3 +15,5 @@ struct stHero
 void HeroInit();
 void Hero_Update();
 void Hero_Draw();
+void Hero_Clipping();
+void Hero_Move();

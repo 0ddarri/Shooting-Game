@@ -14,3 +14,4 @@ struct stBullet
 void BulletInit();
 void BulletUpdate();
 void BulletDraw();
+void BulletCollision();
